@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/api/upload', upload.single('file'), function(req, res) {
-    res.json({ size: req.file.size })
+    res.send('File size : '+req.file.size)
 })
 
 module.exports = router;
